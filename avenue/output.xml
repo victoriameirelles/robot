@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221212 16:00:59.525" rpa="false" schemaversion="3">
+<suite id="s1" name="amazonCadastro" source="C:\Robot_Framework\robot\avenue\amazonCadastro.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site da Amazon e inserindo dados pra cadastro" line="26">
+<kw name="Abrir Site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221212 16:01:01.122" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20221212 16:01:01.121" endtime="20221212 16:01:14.629"/>
+</kw>
+<status status="PASS" starttime="20221212 16:01:01.117" endtime="20221212 16:01:14.629"/>
+</kw>
+<kw name="Botão para criar conta">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${click_criarconta}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 16:01:14.633" level="FAIL">Variable '${click_criarconta}' not found.</msg>
+<status status="FAIL" starttime="20221212 16:01:14.631" endtime="20221212 16:01:14.633"/>
+</kw>
+<status status="FAIL" starttime="20221212 16:01:14.630" endtime="20221212 16:01:14.634"/>
+</kw>
+<kw name="Inserir nome">
+<status status="NOT RUN" starttime="20221212 16:01:14.635" endtime="20221212 16:01:14.635"/>
+</kw>
+<kw name="Inserir e-mail">
+<status status="NOT RUN" starttime="20221212 16:01:14.635" endtime="20221212 16:01:14.636"/>
+</kw>
+<kw name="Inserir senha">
+<status status="NOT RUN" starttime="20221212 16:01:14.639" endtime="20221212 16:01:14.639"/>
+</kw>
+<status status="FAIL" starttime="20221212 16:01:01.115" endtime="20221212 16:01:14.640">Variable '${click_criarconta}' not found.</status>
+</test>
+<status status="FAIL" starttime="20221212 16:00:59.528" endtime="20221212 16:01:14.648"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="amazonCadastro">amazonCadastro</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221212 16:00:59.528" level="ERROR">Error in file 'C:\Robot_Framework\robot\avenue\amazonCadastro.robot' on line 5: Setting variable '${click_criarconta} //a[contains(text(),'Comece aqui.')]' failed: Invalid variable name '${click_criarconta} //a[contains(text(),'Comece aqui.')]'.</msg>
+</errors>
+</robot>

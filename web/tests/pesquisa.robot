@@ -1,14 +1,20 @@
 *** Settings ***
-Resource        basePage.robot
+Library  SeleniumLibrary
 
-Test Setup      Inicia sessão 
-Test Teardown   Encerra sessão
-
-*** Test Cases ***
+*** Variables ***
+${lupa}             id:search-open
+${pesquisar}        //input[@name='s']
+${botao_pesquisar}  //input[@value='Pesquisar']
 *** Keywords ***
-Preencher Pesquisa
-    [Arguments]                     ${uname}       ${pass}
+Abrir site
+    Open Browser    https://blogdoagi.com.br/   chrome
 
-    Click Element                   css:button[name='search-open']
-    Input Text                      css:input[name=search-field]        'finanças'
-    Click Element                   css:button[name='search-submit']
+Pesquisar
+    Click button    ${lupa}
+    Input Text      ${pesquisar}        'finanças'
+    Click Element   ${botao_pesquisar}
+
+** Test Cases **
+Cenário 1: Acessando o site da Agi e pesquisar 
+    Abrir Site
+    Pesquisar

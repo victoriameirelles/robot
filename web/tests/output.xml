@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221212 14:49:39.020" rpa="false" schemaversion="3">
+<suite id="s1" name="Pesquisa" source="C:\Robot_Framework\robot\web\tests\pesquisa.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site da Agi e pesquisar" line="18">
+<kw name="Abrir site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://blogdoagi.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221212 14:49:39.384" level="INFO">Opening browser 'chrome' to base url 'https://blogdoagi.com.br/'.</msg>
+<status status="PASS" starttime="20221212 14:49:39.384" endtime="20221212 14:49:45.994"/>
+</kw>
+<status status="PASS" starttime="20221212 14:49:39.384" endtime="20221212 14:49:45.994"/>
+</kw>
+<kw name="Pesquisar">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${lupa}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 14:49:45.997" level="INFO">Clicking button 'id:search-open'.</msg>
+<msg timestamp="20221212 14:49:46.732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221212 14:49:46.732" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=108.0.5359.99)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0081F243]
+	(No symbol) [0x007A7FD1]
+	(No symbol) [0x0069CF10]
+	(No symbol) [0x006CD003]
+	(No symbol) [0x006C32A6]
+	(No symbol) [0x006E858C]
+	(No symbol) [0x006C2BFF]
+	(No symbol) [0x006E8804]
+	(No symbol) [0x006FC9EB]
+	(No symbol) [0x006E8386]
+	(No symbol) [0x006C163C]
+	(No symbol) [0x006C269D]
+	GetHandleVerifier [0x00AB9A22+2655074]
+	GetHandleVerifier [0x00AACA24+2601828]
+	GetHandleVerifier [0x008C8C0A+619850]
+	GetHandleVerifier [0x008C7830+614768]
+	(No symbol) [0x007B05FC]
+	(No symbol) [0x007B5968]
+	(No symbol) [0x007B5A55]
+	(No symbol) [0x007C051B]
+	BaseThreadInitThunk [0x75036359+25]
+	RtlGetAppContainerNamedObjectPath [0x76F28944+228]
+	RtlGetAppContainerNamedObjectPath [0x76F28914+180]
+</msg>
+<status status="FAIL" starttime="20221212 14:49:45.996" endtime="20221212 14:49:46.763"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pesquisar}</arg>
+<arg>'finanças'</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221212 14:49:46.763" endtime="20221212 14:49:46.763"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${botao_pesquisar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221212 14:49:46.763" endtime="20221212 14:49:46.763"/>
+</kw>
+<status status="FAIL" starttime="20221212 14:49:45.995" endtime="20221212 14:49:46.763"/>
+</kw>
+<status status="FAIL" starttime="20221212 14:49:39.384" endtime="20221212 14:49:46.763">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=108.0.5359.99)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0081F243]
+	(No symbol) [0x007A7FD1]
+	(No symbol) [0x0069CF10]
+	(No symbol) [0x006CD003]
+	(No symbol) [0x006C32A6]
+	(No symbol) [0x006E858C]
+	(No symbol) [0x006C2BFF]
+	(No symbol) [0x006E8804]
+	(No symbol) [0x006FC9EB]
+	(No symbol) [0x006E8386]
+	(No symbol) [0x006C163C]
+	(No symbol) [0x006C269D]
+	GetHandleVerifier [0x00AB9A22+2655074]
+	GetHandleVerifier [0x00AACA24+2601828]
+	GetHandleVerifier [0x008C8C0A+619850]
+	GetHandleVerifier [0x008C7830+614768]
+	(No symbol) [0x007B05FC]
+	(No symbol) [0x007B5968]
+	(No symbol) [0x007B5A55]
+	(No symbol) [0x007C051B]
+	BaseThreadInitThunk [0x75036359+25]
+	RtlGetAppContainerNamedObjectPath [0x76F28944+228]
+	RtlGetAppContainerNamedObjectPath [0x76F28914+180]
+</status>
+</test>
+<status status="FAIL" starttime="20221212 14:49:39.020" endtime="20221212 14:49:46.763"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Pesquisa">Pesquisa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
