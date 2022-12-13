@@ -1,50 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221212 16:00:59.525" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221213 14:13:56.665" rpa="false" schemaversion="3">
 <suite id="s1" name="amazonCadastro" source="C:\Robot_Framework\robot\avenue\amazonCadastro.robot">
-<test id="s1-t1" name="Cenário 1: Acessando o site da Amazon e inserindo dados pra cadastro" line="26">
+<test id="s1-t1" name="Cenário 1: Acessando o site da Amazon e inserindo dados pra cadastro" line="29">
 <kw name="Abrir Site">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.amazon.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221212 16:01:01.122" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
-<status status="PASS" starttime="20221212 16:01:01.121" endtime="20221212 16:01:14.629"/>
+<msg timestamp="20221213 14:13:57.252" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20221213 14:13:57.251" endtime="20221213 14:14:04.467"/>
 </kw>
-<status status="PASS" starttime="20221212 16:01:01.117" endtime="20221212 16:01:14.629"/>
+<status status="PASS" starttime="20221213 14:13:57.250" endtime="20221213 14:14:04.467"/>
 </kw>
 <kw name="Botão para criar conta">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=${click_criarconta}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221212 16:01:14.633" level="FAIL">Variable '${click_criarconta}' not found.</msg>
-<status status="FAIL" starttime="20221212 16:01:14.631" endtime="20221212 16:01:14.633"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221213 14:14:09.472" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221213 14:14:04.471" endtime="20221213 14:14:09.473"/>
 </kw>
-<status status="FAIL" starttime="20221212 16:01:14.630" endtime="20221212 16:01:14.634"/>
+<status status="PASS" starttime="20221213 14:14:04.469" endtime="20221213 14:14:09.473"/>
 </kw>
 <kw name="Inserir nome">
-<status status="NOT RUN" starttime="20221212 16:01:14.635" endtime="20221212 16:01:14.635"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name}</arg>
+<arg>Victória Meirelles</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 14:14:09.478" level="INFO">Typing text 'Victória Meirelles' into text field 'ap_customer_name'.</msg>
+<status status="PASS" starttime="20221213 14:14:09.476" endtime="20221213 14:14:09.839"/>
+</kw>
+<status status="PASS" starttime="20221213 14:14:09.474" endtime="20221213 14:14:09.840"/>
 </kw>
 <kw name="Inserir e-mail">
-<status status="NOT RUN" starttime="20221212 16:01:14.635" endtime="20221212 16:01:14.636"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>victoria.meirelles@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 14:14:09.841" level="INFO">Typing text 'victoria.meirelles@outlook.com' into text field 'ap_email'.</msg>
+<status status="PASS" starttime="20221213 14:14:09.841" endtime="20221213 14:14:10.255"/>
+</kw>
+<status status="PASS" starttime="20221213 14:14:09.840" endtime="20221213 14:14:10.255"/>
 </kw>
 <kw name="Inserir senha">
-<status status="NOT RUN" starttime="20221212 16:01:14.639" endtime="20221212 16:01:14.639"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${senha}</arg>
+<arg>12345</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 14:14:10.258" level="INFO">Typing password into text field 'ap_password'.</msg>
+<msg timestamp="20221213 14:14:10.350" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221213 14:14:10.482" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221213 14:14:10.256" endtime="20221213 14:14:10.482"/>
 </kw>
-<status status="FAIL" starttime="20221212 16:01:01.115" endtime="20221212 16:01:14.640">Variable '${click_criarconta}' not found.</status>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${senha2}</arg>
+<arg>12345</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 14:14:10.483" level="INFO">Typing password into text field 'ap_password_check'.</msg>
+<msg timestamp="20221213 14:14:10.570" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221213 14:14:10.676" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221213 14:14:10.482" endtime="20221213 14:14:10.676"/>
+</kw>
+<status status="PASS" starttime="20221213 14:14:10.256" endtime="20221213 14:14:10.676"/>
+</kw>
+<kw name="Fechar Browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221213 14:14:10.678" endtime="20221213 14:14:13.090"/>
+</kw>
+<status status="PASS" starttime="20221213 14:14:10.677" endtime="20221213 14:14:13.090"/>
+</kw>
+<status status="PASS" starttime="20221213 14:13:57.248" endtime="20221213 14:14:13.090"/>
 </test>
-<status status="FAIL" starttime="20221212 16:00:59.528" endtime="20221212 16:01:14.648"/>
+<status status="PASS" starttime="20221213 14:13:56.669" endtime="20221213 14:14:13.093"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="amazonCadastro">amazonCadastro</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="amazonCadastro">amazonCadastro</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221212 16:00:59.528" level="ERROR">Error in file 'C:\Robot_Framework\robot\avenue\amazonCadastro.robot' on line 5: Setting variable '${click_criarconta} //a[contains(text(),'Comece aqui.')]' failed: Invalid variable name '${click_criarconta} //a[contains(text(),'Comece aqui.')]'.</msg>
 </errors>
 </robot>

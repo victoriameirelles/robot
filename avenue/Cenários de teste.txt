@@ -1,0 +1,6 @@
+1.Criação de Conta 
+- Criação de conta do cliente para que ele consiga transferir dinheiro para Avenue e realizar o investimento
+2.Transferência de dinheiro
+- Transferencia de dinheiro para Avenue para que o cliente consiga investir
+3.Selecionar quanto e onde investir
+- Escolher onde e quanto quer investir com o dinheiro que tem na conta
